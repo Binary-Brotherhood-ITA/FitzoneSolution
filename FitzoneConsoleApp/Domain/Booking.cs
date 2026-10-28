@@ -1,12 +1,16 @@
 using MongoDB.Bson.Serialization.Attributes;
+
 namespace FitzoneConsoleApp.Domain;
 
 public class Booking
 {
+    // Bookingens unikke ID i MongoDB
     [BsonId]
-    public string bookingId { get; set; }
-    public string memberNo { get; set; }
-    public string classId { get; set; }
-    public DateTime bookedAt { get; set; }
-    
+    public string BookingId { get; set; } = string.Empty;
+
+    public string MemberNo { get; set; } = string.Empty;
+
+    public string ClassId { get; set; } = string.Empty;
+
+    public DateTime BookedAt { get; set; }
 }

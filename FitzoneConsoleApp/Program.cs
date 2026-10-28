@@ -1,4 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-using FitzoneConsoleApp.Frontend;
-Console.WriteLine("Hello, World!");
-BookingUI.BookingUIRun();
+﻿using FitzoneConsoleApp.Frontend;
+
+// Opretter vores BookingUI
+BookingUI ui = new BookingUI();
+
+// Starter bookingmenuen
+ui.Run();

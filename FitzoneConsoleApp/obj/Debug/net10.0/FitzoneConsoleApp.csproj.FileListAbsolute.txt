@@ -21,3 +21,4 @@ C:\Users\fowsi\RiderProjects\FitzoneSolution\FitzoneConsoleApp\obj\Debug\net10.0
 C:\Users\fowsi\RiderProjects\FitzoneSolution\FitzoneConsoleApp\obj\Debug\net10.0\FitzoneConsoleApp.pdb
 C:\Users\fowsi\RiderProjects\FitzoneSolution\FitzoneConsoleApp\obj\Debug\net10.0\FitzoneConsoleApp.genruntimeconfig.cache
 C:\Users\fowsi\RiderProjects\FitzoneSolution\FitzoneConsoleApp\obj\Debug\net10.0\ref\FitzoneConsoleApp.dll
+C:\Users\fowsi\RiderProjects\FitzoneSolution\FitzoneConsoleApp\obj\Debug\net10.0\FitzoneConsoleApp.sourcelink.json
