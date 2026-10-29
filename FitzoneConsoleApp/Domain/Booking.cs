@@ -6,11 +6,11 @@ public class Booking
 {
     // Bookingens unikke ID i MongoDB
     [BsonId]
-    public string BookingId { get; set; } = string.Empty;
+    public string BookingId { get; set; }
 
-    public string MemberNo { get; set; } = string.Empty;
+    public string MemberNo { get; set; }
 
-    public string ClassId { get; set; } = string.Empty;
+    public string ClassId { get; set; }
 
     public DateTime BookedAt { get; set; }
 }

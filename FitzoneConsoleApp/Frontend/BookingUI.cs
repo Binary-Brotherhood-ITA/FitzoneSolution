@@ -83,12 +83,20 @@ public class BookingUI
         }
         else
         {
-            // Finder holdet, så vi kan vise en bekræftelse
+            // Finder det hold, som medlemmet har booket.
+            // Vi søger i listen "classes" efter et hold,
+            // hvor ClassId er det samme som det valgte classId.
             FitnessClass? selectedClass =
                 classes.Find(fc => fc.ClassId == classId);
 
+            
+            // Skriver en besked om, at bookingen er gennemført.
+            // \n laver en tom linje før beskeden.
             Console.WriteLine("\nBooking gennemført!");
 
+            
+            // Kontrollerer, om holdet blev fundet.
+            // != null betyder, at selectedClass ikke er tom (null).
             if (selectedClass != null)
             {
                 Console.WriteLine($"Hold: {selectedClass.Title}");

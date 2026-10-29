@@ -71,6 +71,7 @@ public class BookingController
         // Opretter en ny booking
         Booking booking = new Booking();
 
+        // String "-" sørger for at bookingId bliver lavet ved at tage memberNo og classId og have en bindestreg imellem. Lille fed funktion. 
         booking.BookingId = memberNo + "-" + classId;
         booking.MemberNo = memberNo;
         booking.ClassId = classId;
