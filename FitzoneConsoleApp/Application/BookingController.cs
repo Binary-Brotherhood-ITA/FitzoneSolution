@@ -21,23 +21,23 @@ public class BookingController
         // (C#'s nullable reference type "?": betyder i  dette tilfælde Member-objekt eller være null)
         Member? member = mr.GetByMemberNo(memberNo);
 
-        if (member == null)
+        if (member == null) // hvis member ikke findes
         {
             ErrorMessage = "Ukendt medlemsnummer";
             return null;
         }
 
         // Kontrollerer om medlemskabet er aktivt
-        if (member.MembershipStatus != "Active")
+        if (member.MembershipStatus != "Active") // != hvis not Active
         {
-            ErrorMessage = "Dit medlemskab er ikke aktivt";
+            ErrorMessage = "Dit medlemskab er ikke aktivt - kontakt servicedesk!";
             return null;
         }
 
         // Finder fitnessholdet ud fra ID
         FitnessClass? fitnessClass = fc.GetById(classId);
 
-        if (fitnessClass == null)
+        if (fitnessClass == null) // hvis fitnessclass ikke findes
         {
             ErrorMessage = "Fitnessholdet findes ikke";
             return null;
@@ -87,5 +87,13 @@ public class BookingController
     public List<FitnessClass> GetUpcomingClasses()
     {
         return fc.GetUpcoming(DateTime.UtcNow);
+    }
+
+    // Finder det hold, som medlemmet har booket.
+    // Vi søger i listen "classes" efter et hold,
+    // hvor ClassId er det samme som det valgte classId.
+    public FitnessClass? getSelectedClass(string classId)
+    {
+        return fc.getSelectedClass(classId);
     }
 }

@@ -33,11 +33,19 @@ public class FitnessClassRepository
             .ToList();
     }
 
-    // Finder et fitnesshold ud fra dets ID
+    //Finder et fitnesshold ud fra dets ID
+    // ? tillader at FitnessClass må være null
+    // FirstOrDefault(): Returner først fundne resultat ellers returner null
+    // => er lambda. Det er en funktion der siger i fc skal du finde det ClassId der er lig emd classId
     public FitnessClass? GetById(string classId)
     {
-        return _fitnessClasses
-            .Find(fc => fc.ClassId == classId)
-            .FirstOrDefault();
+        return _fitnessClasses.Find(fc => fc.ClassId == classId).FirstOrDefault();
     }
+
+    public FitnessClass? getSelectedClass(string classId)
+    {
+        return _fitnessClasses.Find(fc => fc.ClassId == classId).FirstOrDefault();
+    }
+
 }
+

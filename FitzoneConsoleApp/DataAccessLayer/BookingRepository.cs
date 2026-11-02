@@ -24,6 +24,7 @@ public class BookingRepository
     }
 
     // Tæller hvor mange bookinger der findes på et bestemt hold
+    //CountDocuments returnerer en long-type. Den konverterer vi til int.
     public int CountByClassId(string classId)
     {
         long count = _bookings.CountDocuments(

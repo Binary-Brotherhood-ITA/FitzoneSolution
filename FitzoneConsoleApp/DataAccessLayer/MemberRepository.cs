@@ -24,6 +24,7 @@ public class MemberRepository
     }
 
     // Finder et medlem ud fra medlemsnummer
+    // FirstOrDefault(): Returner først fundne resultat, ellers returner null
     public Member? GetByMemberNo(string memberNo)
     {
         return _members

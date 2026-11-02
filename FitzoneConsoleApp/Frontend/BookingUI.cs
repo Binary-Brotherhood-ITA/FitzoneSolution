@@ -83,18 +83,16 @@ public class BookingUI
         }
         else
         {
-            // Finder det hold, som medlemmet har booket.
-            // Vi søger i listen "classes" efter et hold,
-            // hvor ClassId er det samme som det valgte classId.
-            FitnessClass? selectedClass =
-                classes.Find(fc => fc.ClassId == classId);
+            FitnessClass? selectedClass = new FitnessClass();
+            selectedClass = controller.getSelectedClass(classId);
 
-            
+
             // Skriver en besked om, at bookingen er gennemført.
             // \n laver en tom linje før beskeden.
-            Console.WriteLine("\nBooking gennemført!");
+            Console.WriteLine("\n======BEKRÆFTELSE======");
+            Console.WriteLine("| Booking gennemført! |");
+            Console.WriteLine("\nBookinginfo: ");
 
-            
             // Kontrollerer, om holdet blev fundet.
             // != null betyder, at selectedClass ikke er tom (null).
             if (selectedClass != null)
@@ -105,6 +103,9 @@ public class BookingUI
 
             Console.WriteLine($"Medlemsnummer: {booking.MemberNo}");
             Console.WriteLine($"Booket: {booking.BookedAt.ToLocalTime()}");
+            Console.WriteLine($"Booking ID: {booking.BookingId}");
+            Console.WriteLine("\n|                     |");
+            Console.WriteLine("=======================");
         }
     }
 }
