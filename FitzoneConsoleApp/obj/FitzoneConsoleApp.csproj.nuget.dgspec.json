@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/FitzoneConsoleApp.csproj": {}
+    "C:\\Users\\dreuz\\ita\\02Semester\\Systemdesign\\FitzoneSolution\\FitzoneConsoleApp\\FitzoneConsoleApp.csproj": {}
   },
   "projects": {
-    "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/FitzoneConsoleApp.csproj": {
+    "C:\\Users\\dreuz\\ita\\02Semester\\Systemdesign\\FitzoneSolution\\FitzoneConsoleApp\\FitzoneConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/FitzoneConsoleApp.csproj",
+        "projectUniqueName": "C:\\Users\\dreuz\\ita\\02Semester\\Systemdesign\\FitzoneSolution\\FitzoneConsoleApp\\FitzoneConsoleApp.csproj",
         "projectName": "FitzoneConsoleApp",
-        "projectPath": "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/FitzoneConsoleApp.csproj",
-        "packagesPath": "/Users/ahmadshuhaibqayumi/.nuget/packages/",
-        "outputPath": "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/obj/",
+        "projectPath": "C:\\Users\\dreuz\\ita\\02Semester\\Systemdesign\\FitzoneSolution\\FitzoneConsoleApp\\FitzoneConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\dreuz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dreuz\\ita\\02Semester\\Systemdesign\\FitzoneSolution\\FitzoneConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/ahmadshuhaibqayumi/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\dreuz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -75,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/ahmadshuhaibqayumi/.dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

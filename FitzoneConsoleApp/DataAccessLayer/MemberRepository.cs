@@ -1,6 +1,7 @@
-using FitzoneConsoleApp.Interfaces;
-using MongoDB.Driver;
 using FitzoneConsoleApp.Domain;
+using FitzoneConsoleApp.Interfaces;
+using Microsoft.Extensions.Configuration;
+using MongoDB.Driver;
 
 namespace FitzoneConsoleApp.DataAccessLayer;
 
@@ -8,17 +9,14 @@ public class MemberRepository : IMemberRepository
 {
     // Reference til members collection i MongoDB
     private readonly IMongoCollection<Member> _members;
-
     // Constructoren opretter forbindelsen til databasen
-    public MemberRepository()
+    public MemberRepository(IMongoClient mongoClient, IConfiguration configuration)
     {
-        // Connection string til MongoDB ______ HUSK DETTE ER MIN (FAWSI) CONNECTIONSTRING. SKIFT DEN TIL JERES EGEN
-        string connectionString = "mongodb+srv://fowcode101_db_user:HwwDv43fWKoUb1Jl@cluster0.7xn4frh.mongodb.net/";
-
-        MongoClient client = new MongoClient(connectionString);
+        // Connection string til MongoDB
+        string databaseName = configuration["MongoDb:DatabaseName"] ?? "FitzoneDB";
 
         // Vælger databasen FitzoneDB
-        IMongoDatabase database = client.GetDatabase("FitzoneDB");
+        IMongoDatabase database = mongoClient.GetDatabase(databaseName);
 
         // Henter members collection fra MongoDB
         _members = database.GetCollection<Member>("members");

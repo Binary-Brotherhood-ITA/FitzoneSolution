@@ -1,6 +1,7 @@
 using FitzoneConsoleApp.Interfaces;
 using MongoDB.Driver;
 using FitzoneConsoleApp.Domain;
+using Microsoft.Extensions.Configuration;
 
 namespace FitzoneConsoleApp.DataAccessLayer;
 
@@ -10,19 +11,16 @@ public class FitnessClassRepository : IFitnessClassRepository
     private readonly IMongoCollection<FitnessClass> _fitnessClasses;
 
     // Constructoren opretter forbindelsen til databasen
-    public FitnessClassRepository()
+    public FitnessClassRepository(IMongoClient mongoClient, IConfiguration configuration)
     {
-        // Connection string til MongoDB ______ HUSK DETTE ER MIN (FAWSI) CONNECTIONSTRING. SKIFT DEN TIL JERES EGEN
-        string connectionString = "mongodb+srv://fowcode101_db_user:HwwDv43fWKoUb1Jl@cluster0.7xn4frh.mongodb.net/";
-
-        MongoClient client = new MongoClient(connectionString);
+        // Connection string til MongoDB
+        string databaseName = configuration["MongoDb:DatabaseName"] ?? "FitzoneDB";
 
         // Vælger databasen FitzoneDB
-        IMongoDatabase database = client.GetDatabase("FitzoneDB");
+        IMongoDatabase database = mongoClient.GetDatabase(databaseName);
 
         // Henter fitnessClasses collection fra MongoDB
-        _fitnessClasses =
-            database.GetCollection<FitnessClass>("fitnessClasses");
+        _fitnessClasses = database.GetCollection<FitnessClass>("fitnessClasses");
     }
 
     // Henter alle kommende fitnesshold
