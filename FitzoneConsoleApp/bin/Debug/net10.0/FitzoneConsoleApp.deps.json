@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v10.0": {
       "FitzoneConsoleApp/1.0.0": {
         "dependencies": {
-          "MongoDB.Driver": "3.13.0"
+          "MongoDB.Driver": "3.13.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "10.3.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "10.3.1"
         },
         "runtime": {
           "FitzoneConsoleApp.dll": {}
@@ -22,11 +24,11 @@
           }
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
+      "Microsoft.OpenApi/2.7.5": {
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.17205"
+          "lib/net8.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "2.7.5.0",
+            "fileVersion": "2.7.5.0"
           }
         }
       },
@@ -41,7 +43,6 @@
       "MongoDB.Driver/3.13.0": {
         "dependencies": {
           "DnsClient": "1.6.1",
-          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
           "MongoDB.Bson": "3.13.0",
           "SharpCompress": "0.48.1",
           "Snappier": "1.3.1",
@@ -70,6 +71,36 @@
           }
         }
       },
+      "Swashbuckle.AspNetCore.Swagger/10.3.1": {
+        "dependencies": {
+          "Microsoft.OpenApi": "2.7.5"
+        },
+        "runtime": {
+          "lib/net10.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "10.3.1.0",
+            "fileVersion": "10.3.1.3201"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/10.3.1": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "10.3.1"
+        },
+        "runtime": {
+          "lib/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "10.3.1.0",
+            "fileVersion": "10.3.1.3201"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/10.3.1": {
+        "runtime": {
+          "lib/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "10.3.1.0",
+            "fileVersion": "10.3.1.3201"
+          }
+        }
+      },
       "ZstdSharp.Port/0.7.3": {
         "runtime": {
           "lib/net7.0/ZstdSharp.dll": {
@@ -93,12 +124,12 @@
       "path": "dnsclient/1.6.1",
       "hashPath": "dnsclient.1.6.1.nupkg.sha512"
     },
-    "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
+    "Microsoft.OpenApi/2.7.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6ZCllUYGFukkymSTx3Yr0G/ajRxoNJp7/FqSxSB4fGISST54ifBhgu4Nc0ItGi3i6DqwuNd8SUyObmiC++AO2Q==",
-      "path": "microsoft.extensions.logging.abstractions/2.0.0",
-      "hashPath": "microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512"
+      "sha512": "sha512-0FA67RSnRM4tcBKqiqVu/HPdZ9+QOKbmeRjxRUGTCjPU4C0bmUhd97Dso7Yild5P7nOV6GxJ2xrK0Kv/O9xp0w==",
+      "path": "microsoft.openapi/2.7.5",
+      "hashPath": "microsoft.openapi.2.7.5.nupkg.sha512"
     },
     "MongoDB.Bson/3.13.0": {
       "type": "package",
@@ -127,6 +158,27 @@
       "sha512": "sha512-DOdDQiO8YZ5rBtVLY+6CmR1yp9WYoJRgEEktPBrR0tEj9QO2djA/zv0O3DX0OZpEAfosbY8pytQ9tQUogwQsEA==",
       "path": "snappier/1.3.1",
       "hashPath": "snappier.1.3.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/10.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZBsi9PZbuy25lUIs+4/V8pmuMqospRAX9zVmxzCm1ZRyKiXjsUL9YCyqdi7ezfDwxKuef6P0fUgVan9sLRcDJA==",
+      "path": "swashbuckle.aspnetcore.swagger/10.3.1",
+      "hashPath": "swashbuckle.aspnetcore.swagger.10.3.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/10.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DMamYj+m40rOgnGdAp+4iQ+NXIMup2oYVs/zIOZtal0Dar6CXjCF9/SkepEn42TKNO29wAx0xyLfOXj1VjEIXg==",
+      "path": "swashbuckle.aspnetcore.swaggergen/10.3.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.10.3.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/10.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kXuMIVJBDD6qMwG78VUrKy4x5Ke98HU0Q023Sf2iSBO/x45c5BuByYPAExIs9UeVsjdGGgvLWU5jK8l6MO2Z0Q==",
+      "path": "swashbuckle.aspnetcore.swaggerui/10.3.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.10.3.1.nupkg.sha512"
     },
     "ZstdSharp.Port/0.7.3": {
       "type": "package",

@@ -1,9 +1,10 @@
+using FitzoneConsoleApp.Interfaces;
 using MongoDB.Driver;
 using FitzoneConsoleApp.Domain;
 
 namespace FitzoneConsoleApp.DataAccessLayer;
 
-public class BookingRepository
+public class BookingRepository : IBookingRepository
 {
     // Reference til bookings collection i MongoDB
     private readonly IMongoCollection<Booking> _bookings;

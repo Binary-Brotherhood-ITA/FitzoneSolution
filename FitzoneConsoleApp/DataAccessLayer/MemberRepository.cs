@@ -1,9 +1,10 @@
+using FitzoneConsoleApp.Interfaces;
 using MongoDB.Driver;
 using FitzoneConsoleApp.Domain;
 
 namespace FitzoneConsoleApp.DataAccessLayer;
 
-public class MemberRepository
+public class MemberRepository : IMemberRepository
 {
     // Reference til members collection i MongoDB
     private readonly IMongoCollection<Member> _members;

@@ -1,9 +1,10 @@
+using FitzoneConsoleApp.Interfaces;
 using MongoDB.Driver;
 using FitzoneConsoleApp.Domain;
 
 namespace FitzoneConsoleApp.DataAccessLayer;
 
-public class FitnessClassRepository
+public class FitnessClassRepository : IFitnessClassRepository
 {
     // Reference til fitnessClasses collection fra mongodb
     private readonly IMongoCollection<FitnessClass> _fitnessClasses;
@@ -27,10 +28,12 @@ public class FitnessClassRepository
     // Henter alle kommende fitnesshold
     public List<FitnessClass> GetUpcoming(DateTime now)
     {
+        
         return _fitnessClasses
             .Find(fc => fc.StartTime > now)
             .SortBy(fc => fc.StartTime)
             .ToList();
+        
     }
 
     //Finder et fitnesshold ud fra dets ID

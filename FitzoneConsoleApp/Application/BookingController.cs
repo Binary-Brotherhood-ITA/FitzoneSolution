@@ -1,14 +1,24 @@
 using FitzoneConsoleApp.DataAccessLayer;
 using FitzoneConsoleApp.Domain;
+using FitzoneConsoleApp.Interfaces;
 
 namespace FitzoneConsoleApp.Application;
 
 public class BookingController
 {
     // Referencer til vores repositories
-    private BookingRepository br = new BookingRepository();
-    private MemberRepository mr = new MemberRepository();
-    private FitnessClassRepository fc = new FitnessClassRepository();
+    private readonly IBookingRepository br;
+    private readonly IMemberRepository mr;
+    private readonly IFitnessClassRepository fc;
+
+    public BookingController(IBookingRepository br, 
+        IMemberRepository mr, 
+        IFitnessClassRepository fc)
+    {
+        this.br = br;
+        this.mr = mr;
+        this.fc = fc;
+    }
 
     // Gemmer en fejlbesked, hvis bookingen ikke kan gennemføres
     public string ErrorMessage = "";

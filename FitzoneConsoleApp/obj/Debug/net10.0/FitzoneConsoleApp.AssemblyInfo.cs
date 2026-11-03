@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FitzoneConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9805106cb9e118729ed2c425deae30ed70f63dad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb7e1ae8e33f3702f6f068def62dc18556eae647")]
 [assembly: System.Reflection.AssemblyProductAttribute("FitzoneConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FitzoneConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

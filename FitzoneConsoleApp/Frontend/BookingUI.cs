@@ -6,7 +6,12 @@ namespace FitzoneConsoleApp.Frontend;
 public class BookingUI
 {
     // Reference til vores controller
-    private BookingController controller = new BookingController();
+    private readonly BookingController controller;
+
+    public BookingUI(BookingController controller)
+    {
+        this.controller = controller;
+    }
 
     // Starter programmets menu
     public void Run()

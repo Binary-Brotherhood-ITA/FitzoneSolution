@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fowsi\\RiderProjects\\FitzoneSolution\\FitzoneConsoleApp\\FitzoneConsoleApp.csproj": {}
+    "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/FitzoneConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fowsi\\RiderProjects\\FitzoneSolution\\FitzoneConsoleApp\\FitzoneConsoleApp.csproj": {
+    "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/FitzoneConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fowsi\\RiderProjects\\FitzoneSolution\\FitzoneConsoleApp\\FitzoneConsoleApp.csproj",
+        "projectUniqueName": "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/FitzoneConsoleApp.csproj",
         "projectName": "FitzoneConsoleApp",
-        "projectPath": "C:\\Users\\fowsi\\RiderProjects\\FitzoneSolution\\FitzoneConsoleApp\\FitzoneConsoleApp.csproj",
-        "packagesPath": "C:\\Users\\fowsi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fowsi\\RiderProjects\\FitzoneSolution\\FitzoneConsoleApp\\obj\\",
+        "projectPath": "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/FitzoneConsoleApp.csproj",
+        "packagesPath": "/Users/ahmadshuhaibqayumi/.nuget/packages/",
+        "outputPath": "/Users/ahmadshuhaibqayumi/RiderProjects/FitzoneSolution/FitzoneConsoleApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fowsi\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/ahmadshuhaibqayumi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,7 +39,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
@@ -76,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/Users/ahmadshuhaibqayumi/.dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
